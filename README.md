@@ -203,7 +203,7 @@ MiniJS.Loader.Get(
 );
 ```
 
-There are **3** different asset types: **image**, **audio**, and **text**. Other asset types are not suppoerted (yet).
+There are **3** different asset types: **image**, **audio**, and **text**. Other asset types are not supported (yet).
 
 ### The Renderer Class
 
