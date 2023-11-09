@@ -338,7 +338,19 @@ let MiniJS = {
             return MiniJS.Math.DistanceSquared({ x: x1, y: y1 }, { x: x2, y: y2 }) < (r1 + r2) * (r1 + r2);
         },
         AABBCircle(x1, y1, w1, h1, x2, y2, r2){
-            return false; // TODO
+            let testX = x2;
+            let testY = y2;
+
+            if(x2 < x1) textX = x1;
+            else if(x2 > x1+w1) testX = x1+w1;
+            if(y2 < y1) textY = y1;
+            else if(y2 > y1+h1) testY = y1+h1;
+
+            let dx = x2-testX;
+            let dy = y2-testY;
+            let d = dx*dx + dy*dy;
+
+            return d < r2*r2;
         }
     },
 
